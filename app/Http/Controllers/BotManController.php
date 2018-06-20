@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversations\SkillsConversation;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
@@ -22,12 +23,12 @@ class BotManController extends Controller
             $bot->reply(Lang::trans('messages.welcome'));
         });
 
-        $botman->hears('J\'ai ([0-9]+) ans', function ($bot, $age) {
-            $bot->reply('Tu es vraiment agé de ' . $age . ' ans ?');
+        $botman->hears('.*(' . 'compétences' . ').*', function ($bot, $age) {
+            $bot->startConversaction(new SkillsConversation());
         });
 
         $botman->fallback(function ($bot) {
-            $bot->reply('Désolé j\'en sais rien moi !');
+            $bot->reply('Je ne sais pas');
             $bot->reply('parlons d\'autre chose');
         });
 
