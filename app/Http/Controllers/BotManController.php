@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Conversations\ActivitiesConversation;
+use App\Conversations\ContactConversation;
+use App\Conversations\ExperienceConversation;
+use App\Conversations\PreferencesConversation;
 use App\Conversations\SkillsConversation;
+use App\Conversations\StudiesConversation;
 use BotMan\BotMan\BotMan;
-use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
@@ -19,17 +23,40 @@ class BotManController extends Controller
         App::setLocale('fr');
         $botman = app('botman');
 
-        $botman->hears('.*('. Lang::trans('receive.hello') . ').*', function ($bot) {
+        $botman->hears('.*(' . 'compétence|skill' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new SkillsConversation());
+        });
+
+        $botman->hears('.*(' . 'activité|passe-temps' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new ActivitiesConversation());
+        });
+
+        $botman->hears('.*(' . 'étude|diplôme' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new StudiesConversation());
+        });
+
+        $botman->hears('.*(' . 'contact|email' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new ContactConversation());
+        });
+
+        $botman->hears('.*(' . 'expérience|professionnel' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new ExperienceConversation());
+        });
+
+        $botman->hears('.*(' . 'motivations|préférences|amibitions' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new PreferencesConversation());
+        });
+
+        $botman->hears('.*(' . 'sur vous' . ').*', function (BotMan $bot) {
+            $bot->startConversation(new StudiesConversation());
+        });
+
+        $botman->hears('.*('. Lang::trans('receive.hello') . ').*', function (BotMan $bot) {
             $bot->reply(Lang::trans('messages.welcome'));
         });
 
-        $botman->hears('.*(' . 'compétences' . ').*', function ($bot, $age) {
-            $bot->startConversaction(new SkillsConversation());
-        });
-
-        $botman->fallback(function ($bot) {
-            $bot->reply('Je ne sais pas');
-            $bot->reply('parlons d\'autre chose');
+        $botman->fallback(function (BotMan $bot) {
+            $bot->reply('Je ne peux pas vous répondre :/ Peut-être voudriez-vous parler de mes compétences ou mon expérience');
         });
 
 
