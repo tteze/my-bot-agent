@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Conversations\ActivitiesConversation;
 use App\Conversations\ContactConversation;
 use App\Conversations\ExperienceConversation;
+use App\Conversations\GeneralInformationConversation;
 use App\Conversations\PreferencesConversation;
 use App\Conversations\SkillsConversation;
 use App\Conversations\StudiesConversation;
+use App\Services\SimpleNLP;
 use BotMan\BotMan\BotMan;
 use App\Conversations\ExampleConversation;
 use Illuminate\Support\Facades\App;
@@ -48,7 +50,7 @@ class BotManController extends Controller
         });
 
         $botman->hears('.*(' . 'sur vous' . ').*', function (BotMan $bot) {
-            $bot->startConversation(new StudiesConversation());
+            $bot->startConversation(new GeneralInformationConversation());
         });
 
         $botman->hears('.*('. Lang::trans('receive.hello') . ').*', function (BotMan $bot) {

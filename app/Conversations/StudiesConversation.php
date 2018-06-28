@@ -43,27 +43,27 @@ class StudiesConversation extends Conversation
             'dans l\'école ' . $this->studies[$depth]['school'] . '.\n' .
             $this->studies[$depth]['description'];
 
-        $this->say('');
-        $this->ask('Est-ce que vous voulez connaître mes diplômes précédents ?', [
-            [
-                'pattern' => '.*(oui|yep|allez).*',
-                'callback' => function () use($depth) {
-                    if (isset($this->experience[$depth++])) {
+        $this->say($message);
+        if (isset($this->experience[++$depth])) {
+            $this->ask('Est-ce que vous voulez connaître mes diplômes précédents ?', [
+                [
+                    'pattern' => '.*(oui|yep|allez).*',
+                    'callback' => function () use($depth) {
                         $this->askForStudy($depth);
-                    } else {
-                        $this->say('Je n\'ai pas fais plus d\'étude mais par contre nous pouvons parler de mon expérience 
-                         professionnel!');
-                        $this->bot->startConversation(new ExperienceConversation());
                     }
-                }
-            ],
-            [
-                'pattern' => '.*',
-                'callback' => function () {
-                    $this->say('Je vous laisse choisir ce de quoi vous voulez parler ? 
-                    Peut-être mes compétences ou mes passes-temps ?');
-                }
-            ]
-        ]);
+                ],
+                [
+                    'pattern' => '.*',
+                    'callback' => function () {
+                        $this->say('Je vous laisse choisir ce de quoi vous voulez parler ? 
+                        Peut-être mes compétences ou mes passes-temps ?');
+                    }
+                ]
+            ]);
+        } else {
+            $this->say('Je n\'ai pas fais plus d\'étude mais par contre nous pouvons parler des compétences que 
+            j\'ai acquises plus en détail !');
+            $this->bot->startConversation(new SkillsConversation());
+        }
     }
 }

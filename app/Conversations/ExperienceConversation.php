@@ -35,25 +35,25 @@ class ExperienceConversation extends Conversation
             'chez ' . $this->experience[$depth]['company'] . '.\n' .
             $this->experience[$depth]['description'];
 
-        $this->say('');
-        $this->ask('Est-ce que vous voulez savoir ce que je faisais avant ?', [
-            [
-                'pattern' => '.*(oui|yep|allez).*',
-                'callback' => function () use($depth) {
-                    if (isset($this->experience[$depth++])) {
+        $this->say($message);
+        if (isset($this->experience[++$depth])) {
+            $this->ask('Est-ce que vous voulez savoir ce que je faisais avant ?', [
+                [
+                    'pattern' => '.*(oui|yep|allez).*',
+                    'callback' => function () use($depth) {
                         $this->askForExperience($depth);
-                    } else {
-                        $this->say('Parlons de vous !');
-                        $this->bot->startConversation(new ContactConversation());
                     }
-                }
-            ],
-            [
-                'pattern' => '.*',
-                'callback' => function () {
-                    $this->say('D\'accord, de quel sujet voulez-vous discuter ? Peut-être de mes compétences ?');
-                }
-            ]
-        ]);
+                ],
+                [
+                    'pattern' => '.*',
+                    'callback' => function () {
+                        $this->say('D\'accord, de quel sujet voulez-vous discuter ? Peut-être de mes compétences ?');
+                    }
+                ]
+            ]);
+        } else {
+            $this->say('Parlons de vous !');
+            $this->bot->startConversation(new ContactConversation());
+        }
     }
 }
