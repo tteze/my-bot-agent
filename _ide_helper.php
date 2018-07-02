@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.20 on 2018-06-28 21:53:32.
+ * Generated for Laravel 5.6.20 on 2018-07-02 21:56:07.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12448,11 +12448,34 @@ namespace Facades\App\Services {
          * Use machine learning on examples
          *
          * @param $example
+         * @return \App\Services\Collection 
          * @static 
          */ 
         public static function train($example)
         {
             return \App\Services\SimpleNLP::train($example);
+        }
+        
+        /**
+         * Search the topic corresponding to te text
+         *
+         * @param $text
+         * @return string 
+         * @static 
+         */ 
+        public static function search($text)
+        {
+            return \App\Services\SimpleNLP::search($text);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function load($lang)
+        {
+            return \App\Services\SimpleNLP::load($lang);
         }
         
         /**
@@ -12477,18 +12500,6 @@ namespace Facades\App\Services {
         public static function tokenize($phrase)
         {
             return \App\Services\SimpleNLP::tokenize($phrase);
-        }
-        
-        /**
-         * Search the topic corresponding to te text
-         *
-         * @param $text
-         * @return string 
-         * @static 
-         */ 
-        public static function search($text)
-        {
-            return \App\Services\SimpleNLP::search($text);
         }
          
     }
