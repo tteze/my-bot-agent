@@ -26,6 +26,7 @@ class SimpleNLPTest extends TestCase
      */
     public function testSearch() {
         //test if knowledge are empty
+        dd(SimpleNLP::search('Hello world'));
         $this->assertEmpty(SimpleNLP::search('Hello world'));
 
         SimpleNLP::train(collect(['Hello World' => 'say-hello', 'Hello guys' => 'say-hello']));
@@ -54,5 +55,6 @@ class SimpleNLPTest extends TestCase
         $result = SimpleNLP::search('Hello');
         $this->assertEquals('say-hello', $result);
 
+        Cache::forget('simple-nlp-knowledge-en');
     }
 }

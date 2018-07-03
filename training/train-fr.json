@@ -1,4 +1,24 @@
 {
     "Bonjour !": "say-hello",
-    "Coucou !": "say-hello"
+    "Coucou !": "say-hello",
+
+    "Oui": "say-yes",
+    "Yes": "say-yes",
+    "Yep": "say-yes",
+    "Pourquoi pas !": "say-yes",
+    "Ok": "say-yes",
+
+    "Dites m'en plus sur vos compétences.": "ask-for-skills",
+
+    "Dites m'en plus sur vos études.": "ask-for-studies",
+
+    "Dites m'en plus sur vos passes-temps.": "ask-for-activities",
+
+    "Pourrais-je avoir votre email": "ask-for-contact",
+
+    "Dites m'en plus sur votre expérience professionel.": "ask-for-experience",
+
+    "Dites m'en plus sur vos préférences et vos motivations.": "ask-for-preferences",
+
+    "Dites m'en plus sur vous.": "ask-for-personal-information"
 }

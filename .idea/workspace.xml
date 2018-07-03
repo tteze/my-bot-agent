@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7f88983-afaf-4fbf-9cca-96b213fe65d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/SimpleNLP.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/my-bot-agent.iml" afterPath="$PROJECT_DIR$/.idea/my-bot-agent.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Conversations/ExperienceConversation.php" afterPath="$PROJECT_DIR$/app/Conversations/ExperienceConversation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Conversations/StudiesConversation.php" afterPath="$PROJECT_DIR$/app/Conversations/StudiesConversation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/SimpleNLP.php" afterPath="$PROJECT_DIR$/app/Services/SimpleNLP.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Traits/SimpleTokenizer.php" afterPath="$PROJECT_DIR$/app/Traits/SimpleTokenizer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" afterPath="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php" afterPath="$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/training/train-fr.json" afterPath="$PROJECT_DIR$/training/train-fr.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +26,8 @@
       <file leaf-file-name="BotManController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
@@ -41,12 +35,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleNLP.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimpleTokenizerTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleNLP.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/SimpleNLP.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="82" column="50" lean-forward="true" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+            <state relative-caret-position="1596">
+              <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train-fr.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/training/train-fr.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleNLPMiddleware.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/SimpleNLPMiddleware.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding>
+                <element signature="e#39#64#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +80,8 @@
       <file leaf-file-name="SimpleNLPTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding>
                 <element signature="e#30#65#0#PHP" expanded="true" />
               </folding>
@@ -63,11 +89,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SimpleTokenizer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Traits/SimpleTokenizer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="_ide_helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_ide_helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="12466" column="47" lean-forward="false" selection-start-line="12466" selection-start-column="47" selection-end-line="12466" selection-end-column="47" />
+            <state relative-caret-position="962">
+              <caret line="12465" column="44" lean-forward="false" selection-start-line="12465" selection-start-column="44" selection-end-line="12465" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -85,46 +121,6 @@
       </file>
       <file leaf-file-name="CreatesApplication.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/CreatesApplication.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4578">
-              <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/botman/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -181,9 +177,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/_ide_helper.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" />
         <option value="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" />
+        <option value="$PROJECT_DIR$/app/Traits/SimpleTokenizer.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/SimpleNLPMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BotManController.php" />
         <option value="$PROJECT_DIR$/app/Services/SimpleNLP.php" />
+        <option value="$PROJECT_DIR$/training/train-fr.json" />
       </list>
     </option>
   </component>
@@ -198,6 +198,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
@@ -323,8 +324,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -354,7 +353,14 @@
               <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Traits" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
@@ -370,55 +376,7 @@
             <path>
               <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BotMan" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-bot-agent" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Feature" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="my-bot-agent" type="b2602c69:ProjectViewProjectNode" />
@@ -430,6 +388,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,12 +417,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.SimpleNLPTest.testTrain">
-    <configuration name="SimpleNLPTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.SimpleTokenizerTest.testTokenize">
+    <configuration name="SimpleNLPTest.testLoad" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" method="testLoad" scope="Method" />
     </configuration>
-    <configuration name="SimpleNLPTest.testSegment" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" method="testSegment" scope="Method" />
+    <configuration name="SimpleNLPTest.testSearch" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" method="testSearch" scope="Method" />
     </configuration>
     <configuration name="SimpleNLPTest.testTokenize" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" method="testTokenize" scope="Method" />
@@ -470,23 +430,23 @@
     <configuration name="SimpleNLPTest.testTrain" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\SimpleNLPTest" file="$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php" method="testTrain" scope="Method" />
     </configuration>
-    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/tests" />
+    <configuration name="SimpleTokenizerTest.testTokenize" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\SimpleTokenizerTest" file="$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php" method="testTokenize" scope="Method" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.tests" />
-      <item index="1" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest" />
-      <item index="2" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTokenize" />
-      <item index="3" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTrain" />
-      <item index="4" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testSegment" />
+      <item index="0" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTokenize" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTrain" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testLoad" />
+      <item index="3" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testSearch" />
+      <item index="4" class="java.lang.String" itemvalue="PHPUnit.SimpleTokenizerTest.testTokenize" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTrain" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTokenize" />
-        <item index="2" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testSegment" />
-        <item index="3" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest" />
-        <item index="4" class="java.lang.String" itemvalue="PHPUnit.tests" />
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.SimpleTokenizerTest.testTokenize" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testSearch" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testLoad" />
+        <item index="3" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTrain" />
+        <item index="4" class="java.lang.String" itemvalue="PHPUnit.SimpleNLPTest.testTokenize" />
       </list>
     </recent_temporary>
   </component>
@@ -516,6 +476,7 @@
       <workItem from="1530217400577" duration="331000" />
       <workItem from="1530217748742" duration="465000" />
       <workItem from="1530218231806" duration="6330000" />
+      <workItem from="1530644298724" duration="9132000" />
     </task>
     <task id="LOCAL-00001" summary="init repository">
       <created>1528530649092</created>
@@ -563,39 +524,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimpleNLPTest_testSegment - 2018.06.28 at 23h 47m 07s.xml">
-      <configuration name="SimpleNLPTest.testSegment" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleNLPTest_testSearch - 2018.07.03 at 23h 07m 32s.xml">
+      <configuration name="SimpleNLPTest.testSearch" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTokenize - 2018.06.28 at 23h 47m 38s.xml">
-      <configuration name="SimpleNLPTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleNLPTest_testSearch - 2018.07.03 at 23h 08m 49s.xml">
+      <configuration name="SimpleNLPTest.testSearch" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTokenize - 2018.06.28 at 23h 49m 03s.xml">
-      <configuration name="SimpleNLPTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleNLPTest_testSearch - 2018.07.03 at 23h 10m 17s.xml">
+      <configuration name="SimpleNLPTest.testSearch" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 55m 24s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 15m 28s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 56m 05s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 16m 18s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 56m 22s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 24m 56s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 56m 49s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 25m 02s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 57m 08s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 25m 36s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 59m 28s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 26m 22s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="SimpleNLPTest_testTrain - 2018.06.28 at 23h 59m 56s.xml">
-      <configuration name="SimpleNLPTest.testTrain" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="SimpleTokenizerTest_testTokenize - 2018.07.03 at 23h 27m 01s.xml">
+      <configuration name="SimpleTokenizerTest.testTokenize" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51151000" />
+    <option name="totallyTimeSpent" value="60283000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,15 +571,15 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2132116" sideWeight="0.48291573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21643394" sideWeight="0.48291573" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32687926" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4453303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24812031" sideWeight="0.5170843" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4453303" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24812031" sideWeight="0.5170843" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32687926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32687926" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -651,33 +612,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weatherbot/package.json" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/botman/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/botman.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -977,38 +916,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="12466" column="47" lean-forward="false" selection-start-line="12466" selection-start-column="47" selection-end-line="12466" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="e#40#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/SimpleNLPTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding>
             <element signature="e#30#65#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Traits/SimpleTokenizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_ide_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="12465" column="44" lean-forward="false" selection-start-line="12465" selection-start-column="44" selection-end-line="12465" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/SimpleNLPMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#39#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/SimpleTokenizerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BotManController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/SimpleNLP.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="82" column="50" lean-forward="true" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+        <state relative-caret-position="1596">
+          <caret line="79" column="45" lean-forward="false" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training/train-fr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>

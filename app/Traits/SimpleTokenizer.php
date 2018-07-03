@@ -20,7 +20,22 @@ trait SimpleTokenizer
      * @return array
      */
     public function tokenize(string $phrase) {
-        $phraseWithoutPunctuation = strtolower(trim(preg_replace('/\W+/', ' ', $phrase)));
+        // we strip all acents
+        $phraseWithAccentsStripped = $this->stripAccents($phrase);
+
+        // and replace all punctuation with spaces
+        $phraseWithoutPunctuation = strtolower(trim(preg_replace('/\W+/', ' ', $phraseWithAccentsStripped)));
+
+        // to return the array of tokens exploded on spaces
         return array_filter(explode(' ', $phraseWithoutPunctuation));
+    }
+
+    /**
+     * Strip all accents
+     * @param $str
+     * @return string
+     */
+    function stripAccents($str) {
+        return strtr(utf8_decode($str), utf8_decode('àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
     }
 }

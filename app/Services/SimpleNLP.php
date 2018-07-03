@@ -88,7 +88,12 @@ class SimpleNLP
 
         //return the last of the most present topics in the text.
         // to be more precise we would can answer to all of this topics
-        return array_pop($mostFrequentTopics);
+        $result = array_pop($mostFrequentTopics);
+
+        if ($result === 0) {
+            return 'unknown';
+        }
+        return $result;
     }
 
     public function load($lang) {

@@ -16,6 +16,7 @@ class SimpleTokenizerTest extends TestCase
         $this->assertArraySubset(['hello'], $this->tokenize('Hello'));
         $this->assertArraySubset(['hello', 'world'], $this->tokenize('Hello World !'));
         $this->assertArraySubset(['i', 'm'], $this->tokenize('I\'m not cool'));
+        $this->assertArraySubset(['competences'], $this->tokenize('compétences'));
     }
 
     /**
