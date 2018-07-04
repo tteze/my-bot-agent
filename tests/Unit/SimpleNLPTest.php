@@ -17,8 +17,9 @@ class SimpleNLPTest extends TestCase
         $result = SimpleNLP::train(collect(['Hello World' => 'say-hello', 'Hello guys' => 'say-hello']));
         $this->assertTrue($result->isNotEmpty());
         $this->assertTrue($result->has('hello'));
-        $this->assertNotEmpty($result->get('hello')->has('say-hello'));
-        $this->assertEquals(2, $result->get('hello')->get('say-hello'));
+        $this->assertNotEmpty($result->get('hello')->topics->has('say-hello'));
+        $this->assertEquals(2, $result->get('hello')->topics->get('say-hello'));
+        $this->assertEquals(2, $result->get('hello')->nbOccurences);
     }
 
     /**
@@ -26,8 +27,7 @@ class SimpleNLPTest extends TestCase
      */
     public function testSearch() {
         //test if knowledge are empty
-        dd(SimpleNLP::search('Hello world'));
-        $this->assertEmpty(SimpleNLP::search('Hello world'));
+        $this->assertEquals('unknown', SimpleNLP::search('Hello world'));
 
         SimpleNLP::train(collect(['Hello World' => 'say-hello', 'Hello guys' => 'say-hello']));
         $this->assertEquals('say-hello', SimpleNLP::search('Hello world'));
@@ -46,14 +46,13 @@ class SimpleNLPTest extends TestCase
         Cache::forget('simple-nlp-knowledge-fr');
 
         SimpleNLP::load('fr');
-        $result = SimpleNLP::search('Coucou');
-        $this->assertEquals('say-hello', $result);
+        $this->assertEquals('say-hello', SimpleNLP::search('Coucou'));
+        $this->assertEquals('ask-for-name', SimpleNLP::search('Quel est votre nom ?'));
 
         Cache::forget('simple-nlp-knowledge-en');
 
         SimpleNLP::load('en');
-        $result = SimpleNLP::search('Hello');
-        $this->assertEquals('say-hello', $result);
+        $this->assertEquals('say-hello', SimpleNLP::search('Hello'));
 
         Cache::forget('simple-nlp-knowledge-en');
     }

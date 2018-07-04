@@ -39,7 +39,7 @@ class ExperienceConversation extends Conversation
         if (isset($this->experience[++$depth])) {
             $this->ask('Est-ce que vous voulez savoir ce que je faisais avant ?', [
                 [
-                    'pattern' => '.*(oui|yep|allez).*',
+                    'pattern' => 'say-yes',
                     'callback' => function () use($depth) {
                         $this->askForExperience($depth);
                     }

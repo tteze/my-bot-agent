@@ -20,7 +20,10 @@ class SimpleNLPMiddleware implements Received
      */
     public function received(IncomingMessage $message, $next, BotMan $bot)
     {
-        $message->setText(SimpleNLP::search($message->getText()));
+        $text = SimpleNLP::search($message->getText());
+        if ($text !== 'unknown') {
+            $message->setText(SimpleNLP::search($message->getText()));
+        }
         return $next($message);
     }
 }

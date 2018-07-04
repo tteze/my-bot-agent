@@ -11,7 +11,6 @@ class SimpleNLP
 {
     use SimpleTokenizer;
 
-    private $topics;
     private $tokens;
 
     public function __construct()
@@ -28,17 +27,20 @@ class SimpleNLP
         $example->map(function ($topic, $phrase) {
             collect($this->tokenize($phrase))->each(function($token) use ($topic) {
                 if (!$this->tokens->has($token)) {
-                    $this->tokens->put($token, collect());
+                    $this->tokens->put($token, (object) [
+                        'nbOccurences' => 0,
+                        'topics' => collect()
+                    ]);
                 }
-
                 $tokenInNLP = $this->tokens->get($token);
 
                 // increment topics numbers in tokens Collection
-                if (!$tokenInNLP->has($topic)) {
-                    $tokenInNLP->put($topic, 1);
+                if (!$tokenInNLP->topics->has($topic)) {
+                    $tokenInNLP->topics->put($topic, 1);
                 } else {
-                    $tokenInNLP->put($topic, $tokenInNLP->get($topic) + 1);
+                    $tokenInNLP->topics->put($topic, $tokenInNLP->topics->get($topic) + 1);
                 }
+                $tokenInNLP->nbOccurences += 1;
             });
         });
         return $this->tokens;
@@ -57,13 +59,13 @@ class SimpleNLP
             return collect($tokenizedPhrase)->map(function ($token) {
                 if ($this->tokens->has($token)) {
                     // get the sum of all occurrence for a topic
-                    $sumTopics = $this->tokens->get($token)->sum();
+                    $nbOccurences = $this->tokens->get($token)->nbOccurences;
 
                     // return all averaged occurrences foreach topics about this token
-                    return $this->tokens->get($token)->map(function ($occurrenceTopic, $topic) use($sumTopics) {
+                    return $this->tokens->get($token)->topics->map(function ($occurrenceTopic, $topic) use($nbOccurences) {
                         return (object) [
                             'topic' => $topic,
-                            'value' => $occurrenceTopic / $sumTopics
+                            'value' => $occurrenceTopic / $nbOccurences
                         ];
                     });
                 } else {
@@ -72,17 +74,16 @@ class SimpleNLP
             })->flatten()
                 // group by topics and get average for the phrase
                 ->groupBy('topic')
-                ->map
-                ->avg('value')
+                ->map->avg('value')
                 ->map(function ($occurrenceAvgTopic, $topic) {
                     return (object) [
                         'topic' => $topic,
                         'value' => $occurrenceAvgTopic
                     ];
                 })
+                // get the most probable topic
                 ->sortByDesc('value')
                 ->first()
-                // get the most probable topic
                 ->topic ?? null;
         })->mode();
 
@@ -93,11 +94,11 @@ class SimpleNLP
         if ($result === 0) {
             return 'unknown';
         }
+
         return $result;
     }
 
     public function load($lang) {
-//        dd(base_path());
         if (!File::exists(base_path() . "/training/train-$lang.json")) {
             return;
         }

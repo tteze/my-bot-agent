@@ -20,5 +20,21 @@
 
     "Dites m'en plus sur vos préférences et vos motivations.": "ask-for-preferences",
 
-    "Dites m'en plus sur vous.": "ask-for-personal-information"
+    "Dites m'en plus sur vous.": "ask-for-personal-information",
+
+    "Quel est votre nom ?" : "ask-for-name",
+
+    "Quel age avez vous ?" : "ask-for-age",
+
+    "Où habitez vous ?" : "ask-for-place-living",
+
+    "Quel est votre adresse ?" : "ask-for-place-adress",
+
+    "Êtes-vous réel ?": "ask-for-reality",
+
+    "Comment pouvez vous m'aider ?": "ask-for-help",
+
+    "Comment allez vous ?": "ask-for-state",
+
+    "Quelle heure est-il ?": "ask-for-time"
 }
