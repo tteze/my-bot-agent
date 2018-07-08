@@ -11,6 +11,8 @@ class SimpleNLP
 {
     use SimpleTokenizer;
 
+    const TRUST = 0.5;
+
     private $tokens;
 
     public function __construct()
@@ -74,13 +76,14 @@ class SimpleNLP
             })->flatten()
                 // group by topics and get average for the phrase
                 ->groupBy('topic')
-                ->map->avg('value')
+                ->map->max('value')
                 ->map(function ($occurrenceAvgTopic, $topic) {
                     return (object) [
                         'topic' => $topic,
                         'value' => $occurrenceAvgTopic
                     ];
                 })
+                ->where('value', '>', static::TRUST)
                 // get the most probable topic
                 ->sortByDesc('value')
                 ->first()

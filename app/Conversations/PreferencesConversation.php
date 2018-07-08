@@ -3,15 +3,10 @@
 namespace App\Conversations;
 
 use BotMan\BotMan\Messages\Conversations\Conversation;
+use Illuminate\Support\Facades\Lang;
 
 class PreferencesConversation extends Conversation
 {
-    private $preferences = [
-        'salaire' => 'J\'estime valoir un salaire sur une fourchette de 36000€-42000€',
-        'management' => 'Je préfère avoir de l\'autonomie. Je me sentirais plus à l\'aise dans une entreprise libéré que dans 
-            une société paternaliste ou maternaliste.',
-        'recherche' => 'Je je recherche essentielement la difficulté technique'
-    ];
 
     public function run()
     {
@@ -19,13 +14,12 @@ class PreferencesConversation extends Conversation
     }
 
     public function askForTypeOfPreferences() {
-        $this->ask('De laquel de mes préférences voudriez-vous discuter ? (Ce que je recherche, le type de management 
-            dans lequel je me sens le mieux, le salaire auquel je prétend.)', $this->getPreferencesDetails());
+        $this->ask(Lang::get('messages.preferences'), $this->getPreferencesDetails());
     }
 
 
     public function getPreferencesDetails() {
-        return collect($this->preferences)->map(function ($descriptionPreference, $preference) {
+        return collect(Lang::get('infos.preferences'))->map(function ($descriptionPreference, $preference) {
             return [
                 'pattern' => '.*(' . $preference . ').*',
                 'callback' => function () use($descriptionPreference) {
@@ -36,7 +30,7 @@ class PreferencesConversation extends Conversation
         })->push([
             'pattern' => '.*',
             'callback' => function () {
-                $this->say('Parlons de votre entreprise !');
+                $this->say(Lang::get('messages.speak-about-you'));
                 $this->getBot()->startConversation(new ContactConversation());
             }
         ])->toArray();

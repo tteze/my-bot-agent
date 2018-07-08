@@ -1,4 +1,79 @@
 {
   "Hello !": "say-hello",
-  "Hi !": "say-hello"
+  "Hi !": "say-hello",
+  "Good morning" : "say-hello",
+  "Good evening": "say-hello",
+  "Hey": "say-hello",
+
+  "Yes": "say-yes",
+  "Yep": "say-yes",
+  "Why not !": "say-yes",
+  "Ok": "say-yes",
+  "Agree": "say-yes",
+
+  "Tell me more about your skills.": "ask-for-skills",
+  "Telle me about your skills": "ask-for-skills",
+  "What are your skills": "ask-for-skills",
+  "What do you know to do ?": "ask-for-skills",
+  "What is your technical luggage": "ask-for-skills",
+
+  "Tell me more about your studies.": "ask-for-studies",
+  "What degrees have ?": "ask-for-studies",
+  "Did you been graduate ?": "ask-for-studies",
+  "Have you grades ?": "ask-for-studies",
+  "What is you cursus ?": "ask-for-studies",
+  "Which school did you done ?": "ask-for-studies",
+  "Wich formation did you made ?": "ask-for-studies",
+
+  "Tell me more about your hobbies.": "ask-for-activities",
+  "Tell me more about your activities.": "ask-for-activities",
+  "What are you hobbies ?": "ask-for-activities",
+  "What do you practice ?": "ask-for-activities",
+  "Have you hobbies ?": "ask-for-activities",
+  "How do you skip time" : "ask-for-activities",
+
+  "Can I have your mail ?": "ask-for-contact",
+  "Can we share contact ?": "ask-for-contact",
+  "What can I use to contact you ?": "ask-for-contact",
+  "Can you give me your mail ?": "ask-for-contact",
+  "Can you contact me ?": "ask-for-contact",
+  "How can I contact you ?": "ask-for-contact",
+  "How can I recontact you ?": "ask-for-contact",
+
+  "Tell me more about your professional experience.": "ask-for-experience",
+  "What is your professional experience ?": "ask-for-experience",
+  "Where did you worked ?": "ask-for-experience",
+  "What is your job ?": "ask-for-experience",
+  "What is your current job ?": "ask-for-experience",
+  "What are you actually doing ?": "ask-for-experience",
+  "For who you are actually working for.": "ask-for-experience",
+  "What was your previous job ?": "ask-for-experience",
+
+  "Tell me more about your preferences an motivations.": "ask-for-preferences",
+  "Wich are you motivations ?": "ask-for-preferences",
+  "What are you searching for ?": "ask-for-preferences",
+
+  "What is your name ?" : "ask-for-name",
+  "What's you name ?" : "ask-for-name",
+
+  "How old are you ?" : "ask-for-age",
+
+  "Where do you live ?" : "ask-for-place-living",
+  "Where are you living ?" : "ask-for-place-living",
+
+  "What is your adress ?" : "ask-for-place-adress",
+
+  "Are you real ?": "ask-for-reality",
+  "Do you really exist ?": "ask-for-reality",
+
+  "How can you help me ?": "ask-for-help",
+  "What can you do to help me ?": "ask-for-help",
+  "Which questions can I ask to you ?": "ask-for-help",
+
+  "How are you ?": "ask-for-state",
+  "Are you fine ?": "ask-for-state",
+
+  "What time is it ?": "ask-for-time",
+
+  "What day is it ?": "ask-for-date"
 }

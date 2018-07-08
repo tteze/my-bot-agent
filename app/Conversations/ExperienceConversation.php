@@ -3,22 +3,11 @@
 namespace App\Conversations;
 
 use BotMan\BotMan\Messages\Conversations\Conversation;
+use Illuminate\Support\Facades\Lang;
 
 class ExperienceConversation extends Conversation
 {
-    private $experience = [
-        [
-            'period' => '2015-2018',
-            'job' => 'Développeur',
-            'company' => 'Valeur et Capital',
-            'description' => 'Développement php/mysql autour de l\'immobilier chez le client final.
-                J\'ai pris la compétence sur les principaux framework php et j\'ai pu apprendre le côté fonctionnel lié à l\'immobilier.',
-        ]
-    ];
 
-    /**
-     * @return mixed
-     */
     public function run()
     {
         $this->askForExperience();
@@ -30,14 +19,18 @@ class ExperienceConversation extends Conversation
      */
     public function askForExperience($depth = 0)
     {
-        $message = 'Pendant la période ' . $this->experience[$depth]['period'] . ' '.
-            'j\'ai travaille en tant que ' . $this->experience[$depth]['job'] . ' ' .
-            'chez ' . $this->experience[$depth]['company'] . '.\n' .
-            $this->experience[$depth]['description'];
+        $experiences = Lang::get('infos.experiences');
+        $message = Lang::get('messages.experiences', [
+            'period' => $experiences[$depth]['period'],
+            'job' => $experiences[$depth]['job'],
+            'company' => $experiences[$depth]['company'],
+            'description' => $experiences[$depth]['description'],
+
+        ]);
 
         $this->say($message);
-        if (isset($this->experience[++$depth])) {
-            $this->ask('Est-ce que vous voulez savoir ce que je faisais avant ?', [
+        if (isset($experiences[++$depth])) {
+            $this->ask(Lang::get('messages.ask-for-previous-experience'), [
                 [
                     'pattern' => 'say-yes',
                     'callback' => function () use($depth) {
@@ -47,12 +40,12 @@ class ExperienceConversation extends Conversation
                 [
                     'pattern' => '.*',
                     'callback' => function () {
-                        $this->say('D\'accord, de quel sujet voulez-vous discuter ? Peut-être de mes compétences ?');
+                        $this->say(Lang::get('messages.ask-for-skills'));
                     }
                 ]
             ]);
         } else {
-            $this->say('Parlons de vous !');
+            $this->say(Lang::get('messages.ask-about-you'));
             $this->bot->startConversation(new ContactConversation());
         }
     }

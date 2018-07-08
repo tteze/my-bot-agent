@@ -1,40 +1,87 @@
 {
     "Bonjour !": "say-hello",
     "Coucou !": "say-hello",
+    "Bonsoir" : "say-hello",
+    "Salut": "say-hello",
+    "Hey": "say-hello",
 
     "Oui": "say-yes",
     "Yes": "say-yes",
     "Yep": "say-yes",
     "Pourquoi pas !": "say-yes",
     "Ok": "say-yes",
+    "D'accord": "say-yes",
 
     "Dites m'en plus sur vos compétences.": "ask-for-skills",
+    "Parlez-moi de vos compétences": "ask-for-skills",
+    "Quelles sont vos compétences": "ask-for-skills",
+    "Maîtrisez-vous": "ask-for-skills",
+    "Qu'est-ce que vous savez faire ?": "ask-for-skills",
+    "Que savez-vous faire ?": "ask-for-skills",
+    "Quel est votre bagage technique": "ask-for-skills",
 
     "Dites m'en plus sur vos études.": "ask-for-studies",
+    "Quels sont vos diplôme ?": "ask-for-studies",
+    "Quel est votre cursus ?": "ask-for-studies",
+    "Quel est votre parcours universitaire ?": "ask-for-studies",
+    "Quel est votre parcours scolaire ?": "ask-for-studies",
+    "Parlez moi de vos études.": "ask-for-studies",
+    "Quel est votre formation ?": "ask-for-studies",
 
     "Dites m'en plus sur vos passes-temps.": "ask-for-activities",
+    "Quels sont vos hobbies ?": "ask-for-activities",
+    "Quels activités pratiquez vous ?": "ask-for-activities",
+    "Que faites vous en dehors du boulot ?": "ask-for-activities",
+    "Quels sont vos passions ?": "ask-for-activities",
+    "Avez-vous des hobbies ?": "ask-for-activities",
+    "Avez-vous des passes-temps ?": "ask-for-activities",
+    "Avez-vous des loisirs ?": "ask-for-activities",
+    "Que faites vous pour vous détendre" : "ask-for-activities",
 
-    "Pourrais-je avoir votre email": "ask-for-contact",
+    "Pourrais-je avoir votre email ?": "ask-for-contact",
+    "Pourrions nous échanger nos contact ?": "ask-for-contact",
+    "Par quel moyen puis-je vous contacter ?": "ask-for-contact",
+    "Pourrais-je avoir votre mail ?": "ask-for-contact",
+    "Pourriez-vous nous recontacter ?": "ask-for-contact",
+    "Comment puis-je vous recontacter ?": "ask-for-contact",
 
     "Dites m'en plus sur votre expérience professionel.": "ask-for-experience",
+    "Quel est votre expérience professionel ?": "ask-for-experience",
+    "Quel sont vos expériences professionels ?": "ask-for-experience",
+    "Où avez vous travaillez ?": "ask-for-experience",
+    "Quel est votre parcours professionel ?": "ask-for-experience",
+    "Parlez mois de votre cursus pro?": "ask-for-experience",
+    "Dites m'en plus sur votre cursus pro.": "ask-for-experience",
+    "Quels étaient vos précédent job ?": "ask-for-experience",
+    "Où travaillez vous ?": "ask-for-experience",
+    "Quels étaient vos précédents postes ?": "ask-for-experience",
 
     "Dites m'en plus sur vos préférences et vos motivations.": "ask-for-preferences",
-
-    "Dites m'en plus sur vous.": "ask-for-personal-information",
+    "Quels sont vos motivations ?": "ask-for-preferences",
+    "Que recherchez-vous ?": "ask-for-preferences",
 
     "Quel est votre nom ?" : "ask-for-name",
+    "Comment vous appelez vous ?" : "ask-for-name",
+    "Comment vous vous appelez ?" : "ask-for-name",
 
     "Quel age avez vous ?" : "ask-for-age",
 
     "Où habitez vous ?" : "ask-for-place-living",
+    "Où est-ce que vous vivez ?" : "ask-for-place-living",
 
     "Quel est votre adresse ?" : "ask-for-place-adress",
 
     "Êtes-vous réel ?": "ask-for-reality",
+    "Existez-vous vraiment ?": "ask-for-reality",
 
     "Comment pouvez vous m'aider ?": "ask-for-help",
+    "Qu'est-ce que vous pourriez faire pour m'aider ?": "ask-for-help",
+    "Quelles question puis-je vous poser ?": "ask-for-help",
 
     "Comment allez vous ?": "ask-for-state",
+    "ça va ? ?": "ask-for-state",
 
-    "Quelle heure est-il ?": "ask-for-time"
+    "Quelle heure est-il ?": "ask-for-time",
+
+    "Quel jour sommes nous ?": "ask-for-date"
 }

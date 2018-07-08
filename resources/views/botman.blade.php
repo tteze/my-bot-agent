@@ -1,13 +1,12 @@
 <script>
 var botmanWidget = {
-    title: 'Théophile Branche',
-    introMessage: 'Bonjour ! je suis un Théophile virtuel. Je me permet de parler en son nom :). Si vous avez des questions' +
-    ' à propos de mes compétences, de mon expérience ou de mes activités n\'hésitez surtout pas. ' +
-    'Et si vous voulez un échange de coordonnées on peux faire ça ici aussi, mais seulement si vous vendez bien votre entreprise ;)',
+    chatbot: "/botman{{ app()->getLocale() === 'en' ? '/en' : ''}}",
+    title: "@lang('infos.surname') @lang('infos.name')",
+    introMessage: "@lang('messages.intro', ['surname' => __('infos.surname')])",
 //    bubbleAvatarUrl: "",
     bubbleBackground: "#5b7399",
     mainColor: "#5b7399",
-    placeholderText: "Envoyez un message",
+    placeholderText: "@lang('messages.send-message')",
     aboutLink: "https://github.com/tteze/my-bot-agent",
     aboutText: "Github - My bot agent",
 };

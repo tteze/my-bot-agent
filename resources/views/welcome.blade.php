@@ -5,37 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .image-user {
+        html {
             height: 100%;
-            max-width: 50%;
-            display: inline-block;
-            background-color: lightblue;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body {
+            margin: 0;
+            background: url("{{ asset('/img/user.jpg') }}") no-repeat;
+            background-size: 30%;
+            background-position-y: -250px;
         }
         .content {
             width: 30%;
-            display: inline-block;
             text-align: center;
+            float: left;
+            margin-left: 35%;
+            margin-top: 10%;
+
         }
         .image-arrow {
-            position: absolute;
-            bottom: 30%;
-            right: 30%;
+            position: fixed;
+            bottom: 100px;
+            right: 180px;
+            width: 150px;
+            transform: rotate(20deg);
+        }
+        .lang {
+            float: right;
+            margin: 10px 10px 0 0;
+        }
+        .lang img {
+            width: 70px;
         }
     </style>
-    <title>My agent bot</title>
+    <title>@lang('infos.surname') @lang('infos.name')</title>
 </head>
 <body>
-    <img src="{{ asset('/img/user.jpg') }}" class="image-user"/>
-
     <div class="content">
-        <h1>Théophile Branche</h1>
-        <h2>Développeur full-stack</h2>
+        <h1>@lang('infos.surname') @lang('infos.name')</h1>
+        <h2>@lang('infos.job')</h2>
         <p>
-            Vous pouvez discuter avec mon Agent bot si vous voulez des informations sur mon CV !
-            Et si vos voulez en savoir plus sur comment il a été fait il vous suffit de d'aller voir sur
-            <a href="https://github.com/tteze/my-bot-agent">GITHUB</a>
+            @lang('infos.accroche')
         </p>
-        <img src="{{ asset('/img/arrow-to-bot') }}" class="image-arrow">
+        <img src="{{ asset('/img/arrow.png') }}" class="image-arrow">
+    </div>
+
+    <div class="lang">
+        @if(app()->getLocale() === 'fr')
+            <a href="{{ url('/en') }}"><img src="{{ asset('/img/lang-english.jpg') }}" /></a>
+        @else
+            <a href="{{ url('/') }}"><img src="{{ asset('/img/lang-french.jpg') }}" /></a>
+        @endif
     </div>
 <script src="{{ asset('/js/app.js') }}"></script>
 @include('botman')
