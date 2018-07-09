@@ -1,6 +1,6 @@
 <script>
 var botmanWidget = {
-    chatbot: "/botman{{ app()->getLocale() === 'en' ? '/en' : ''}}",
+    chatServer: "/botman{{ app()->getLocale() === 'en' ? '/en' : ''}}",
     title: "@lang('infos.surname') @lang('infos.name')",
     introMessage: "@lang('messages.intro', ['surname' => __('infos.surname')])",
     bubbleAvatarUrl: "{{ asset('/img/user-bubble.png') }}",

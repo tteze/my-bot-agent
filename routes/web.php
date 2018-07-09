@@ -17,12 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{lang}', function () {
-    App::setLocale('{lang}');
+Route::get('/en', function () {
+    App::setLocale('en');
 
     return view('welcome');
 });
 
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
-Route::match(['get', 'post'], '/botman/{lang}', 'BotManController@handle');
+Route::match(['get', 'post'], '/botman/{lang?}', 'BotManController@handle');
 //Route::get('/botman/tinker', 'BotManController@tinker');
