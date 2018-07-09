@@ -3,7 +3,7 @@ var botmanWidget = {
     chatbot: "/botman{{ app()->getLocale() === 'en' ? '/en' : ''}}",
     title: "@lang('infos.surname') @lang('infos.name')",
     introMessage: "@lang('messages.intro', ['surname' => __('infos.surname')])",
-//    bubbleAvatarUrl: "",
+    bubbleAvatarUrl: "{{ asset('/img/user-bubble.png') }}",
     bubbleBackground: "#5b7399",
     mainColor: "#5b7399",
     placeholderText: "@lang('messages.send-message')",

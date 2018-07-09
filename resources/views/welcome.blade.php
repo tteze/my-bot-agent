@@ -12,12 +12,11 @@
         }
         body {
             margin: 0;
-            background: url("{{ asset('/img/user.jpg') }}") no-repeat;
-            background-size: 30%;
-            background-position-y: -250px;
+            background: url("{{ asset('/img/user.png') }}") no-repeat 5% 50%;
+            background-size: 40%;
         }
         .content {
-            width: 30%;
+            width: 35%;
             text-align: center;
             float: left;
             margin-left: 35%;
@@ -37,6 +36,16 @@
         }
         .lang img {
             width: 70px;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: lighter;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-bottom: 50px;
         }
     </style>
     <title>@lang('infos.surname') @lang('infos.name')</title>
