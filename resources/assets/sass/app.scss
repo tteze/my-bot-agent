@@ -15,11 +15,11 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: white;
+
   @media (min-width: 770px) {
       background: url("/img/user.png") no-repeat 0 50%;
       background-size: 40%;
   }
-
 }
 
 .content {
