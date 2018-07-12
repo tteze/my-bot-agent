@@ -80,6 +80,9 @@
 
     "Comment allez vous ?": "ask-for-state",
     "ça va ? ?": "ask-for-state",
+    "Est-ce que ça va ?": "ask-for-state",
+    "Est-ce que vous allez bien ?": "ask-for-state",
+    "Allez-vous bien ?": "ask-for-state",
 
     "Quelle heure est-il ?": "ask-for-time",
 
