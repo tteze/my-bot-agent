@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('/img/user-bubble.png') }}" />
     <title>@lang('infos.surname') @lang('infos.name')</title>
 </head>
 
