@@ -69,7 +69,7 @@ return [
         ],
         'bottom' => [
             'Spark' => "J'ai eu l'occasion de voir et d'expérimenter Spark à travers un projet de cours.",
-            'Big Data' => "J'ai une approche au big data sur le stckage avec HDFS et mongo mais ausi sur le traitement. On a eu l'occasion
+            'Big Data' => "J'ai une approche au big data sur le stockage avec HDFS et mongo mais ausi sur le traitement. On a eu l'occasion
                 à travers un projet de fouille de données d'extraire les motifs fréquents de goût d'utilisateur de l'application yelp
                 à l'aide de l'algorithme \"à priori\"",
             'Sécurité' => "J'ai eu un cours de sécurité ou on a appris à exploiter et contrer les 10 failles OWASP 2017."

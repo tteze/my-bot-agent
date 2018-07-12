@@ -47,7 +47,7 @@ return [
     'interests' => "Mes principales aspirations sont: :like Qu'est-ce que votre entreprise pourrais m'apporter ?",
     'management-type' => "Quel est le type de management de votre entreprise ?",
     'career' => "Quels sont les perspectives de carrières ?",
-    'mail' => "Auriez-vous un mail que je pourrais recontacter ?",
+    'mail' => "Quel mail pourrais-je utiliser pour vous recontacter ?",
     'confirm-contact' => "Super ! J'ai toutes les informations dont j'ai besoin pour vous recontacter. En attendant 
             je me ferais un plaisir de répondre à d'autres quetions si vous en avez.",
 
