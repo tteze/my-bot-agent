@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-
+require('botman-web-widget');
 window.Vue = require('vue');
 
 /**

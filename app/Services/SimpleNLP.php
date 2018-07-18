@@ -26,7 +26,7 @@ class SimpleNLP
      * @return Collection
      */
     public function train(Collection $example) {
-        $example->map(function ($topic, $phrase) {
+        $example->each(function ($topic, $phrase) {
             collect($this->tokenize($phrase))->each(function($token) use ($topic) {
                 if (!$this->tokens->has($token)) {
                     $this->tokens->put($token, (object) [

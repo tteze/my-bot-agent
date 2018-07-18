@@ -12,5 +12,4 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .js('node_modules/botman-web-widget/build/js/widget.js', 'public/js/botman.js')
    .sass('resources/assets/sass/app.scss', 'public/css');
